@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int findMax(vector<int>& nums) {
+    int max_num = nums[0];
+    for (int i = 1; i < nums.size(); ++i) {
+        if (nums[i] > max_num) {
+            max_num = nums[i];
+        }
+    }
+    return max_num;
+}
