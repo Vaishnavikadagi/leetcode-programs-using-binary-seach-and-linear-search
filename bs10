@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+string solve(int n) {
+    for (int i = n; i >= 0; --i) {
+        int div = i / 5;
+        if ((i - div * 3) % 5 == 0) {
+            return string(i - div * 3, '5') + string(div * 3, '3');
+        }
+    }
+    return "-1";
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        cout << solve(n) << endl;
+    }
+    return 0;
+}
